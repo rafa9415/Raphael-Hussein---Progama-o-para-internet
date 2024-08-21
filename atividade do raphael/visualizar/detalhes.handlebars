@@ -1,0 +1,15 @@
+<h2>{{evento.nome}}</h2>
+<p>Data: {{evento.data}}</p>
+<p>Horário: {{evento.horario}}</p>
+<p>Local: {{evento.local}}</p>
+<p>Preço: R$ {{evento.preco}}</p>
+<p>Ingressos Disponíveis: {{evento.ingressosDisponiveis}}</p>
+<p>Descrição: {{evento.descricao}}</p>
+
+<form action="/comprar/{{evento.id}}" method="POST">
+    <label for="quantidade">Quantidade de Ingressos:</label>
+    <input type="number" id="quantidade" name="quantidade" min="1" max="{{evento.ingressosDisponiveis}}" value="1">
+    <button type="submit" class="btn">Comprar</button>
+</form>
+
+<a href="/">Voltar para a lista de eventos</a>

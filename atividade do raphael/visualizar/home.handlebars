@@ -1,0 +1,15 @@
+{{#*inline "title"}}Eventos Disponíveis{{/inline}}
+
+<div class="event-list">
+    {{#each eventos}}
+    <div class="event">
+        <h2>{{this.nome}}</h2>
+        <p>Data: {{this.data}}</p>
+        <p>Local: {{this.local}}</p>
+        <p>Preço: R$ {{this.preco}}</p>
+        <p>Ingressos Disponíveis: {{this.ingressosDisponiveis}}</p>
+        <a href="/evento/{{this.id}}" class="btn">Ver Detalhes</a>
+        <a href="#" class="btn">Comprar Ingresso</a>
+    </div>
+    {{/each}}
+</div>
